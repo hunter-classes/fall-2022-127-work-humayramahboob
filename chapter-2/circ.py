@@ -1,14 +1,7 @@
-# Exercise 2.8
+#8 Write a program that will compute the area of a circle. Prompt the user to enter the radius and print a nice message back to the user with the answer.
 
-n = input("Please enter your name: ")
-print("Hello", n)                      # This inserts your name into the string
-
-str_seconds = input("Please enter the number of seconds you wish to convert")
-total_secs = int(str_seconds)
-
-hours = total_secs // 3600
-secs_still_remaining = total_secs % 3600
-minutes =  secs_still_remaining // 60
-secs_finally_remaining = secs_still_remaining  % 60
-
-print("Hrs=", hours, "mins=", minutes, "secs=", secs_finally_remaining)
+import math 
+r=input("Enter the radius of the circle:")
+float_r = float(r)
+area = math.pi*(float_r**2)
+print('When the radius of the circle is',r,', the area of the circle is',area)

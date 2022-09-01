@@ -1,12 +1,6 @@
-# Exercise 2.3
-print(3.14, int(3.14))
-print(3.9999, int(3.9999))       # This doesn't round to the closest int!
-print(3.0, int(3.0))
-print(-3.999, int(-3.999))        # Note that the result is closer to zero
-print(int("23bottles"))          # THIS DOES NOT WORK AS A INTEGER
-print(float("123.45"))           # TURNS CLASS INTO FLOAT    
-print(type(float("123.45")))
+#3 Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight). If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm). Write a Python program to solve the general version of the above problem. Ask the user for the time now (in hours), and then ask for the number of hours to wait for the alarm. Your program should output what the time will be on the clock when the alarm goes off.
 
-print(str(17))                #TURNS THE CLASS INTO STRING
-print(str(123.45))
-print(type(str(123.45)))
+x=input("The time in hours:")
+y=input("The number of hours to wait for the alarm:")
+output = (int(x)+int(y))%24
+print('The time is',x,'in hours. After the alarm goes off in',y,'hours, it will be',output,'in hours.')
