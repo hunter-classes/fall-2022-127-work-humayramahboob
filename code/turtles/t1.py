@@ -4,26 +4,62 @@ def sample_function():
   print("This is a function")
   print("It can be used multiple times")
 
+def square(t,x,y,w,color,sidelen):
+  """
+  Parameters:
+  t = turtle
+  x,y = location
+  w = width
+  color = color to draw in
+  sidelen = lenght of sides
+  """
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+  # draw a square
+  for i in range(4):
+    t.forward(sidelen)
+    t.right(90)
+
+def triangle(t,x,y,w,color,sidelen):
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+  #draw a triangle
+  for i in range(3):
+    t.forward(sidelen)
+    t.left(120)
+
+def hexagon(t,x,y,w,color,sidelen):
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+  #draw a hexagon
+  for i in range(6):
+    t.forward(sidelen)
+    t.left(300)
+
+# make a ngon function ngon((t,numsides,x,y,color.w,sidelen):
+
 wn = turtle.Screen()
-
 crush = turtle.Turtle()
-# draw a square
-for i in range(4):
-  crush.forward(50)
-  crush.right(90)
-  
-# draw a triangle
-squirt = turtle.Turtle()
-squirt.up()
-squirt.goto(100,100)
-squirt.down()
-squirt.color("red")
-squirt.width(5)
-for i in range(3):
-  squirt.forward(50)
-  squirt.left(120)
 
-sample_function()
+square(crush,0,0,1,"green",50)
+
+squirt = turtle.Turtle()
+square(squirt,100,100,5,"red",80)
+square(crush,-50,-30,3,"yellow",100)
+crush.setheading(45)
+square(crush,150,30,2,"blue",60)
+
+triangle(crush,200,200,3,"pink",50)
+hexagon(crush,-200,200,3,"purple",50)
 
 wn.exitonclick()
 wn.mainloop()
