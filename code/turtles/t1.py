@@ -34,18 +34,6 @@ def triangle(t,x,y,w,color,sidelen):
     t.forward(sidelen)
     t.left(120)
 
-def hexagon(t,x,y,w,color,sidelen):
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
-  #draw a hexagon
-  for i in range(6):
-    t.forward(sidelen)
-    t.left(300)
-
-# make a ngon function ngon((t,numsides,x,y,color.w,sidelen):
 
 wn = turtle.Screen()
 crush = turtle.Turtle()
@@ -59,7 +47,6 @@ crush.setheading(45)
 square(crush,150,30,2,"blue",60)
 
 triangle(crush,200,200,3,"pink",50)
-hexagon(crush,-200,200,3,"purple",50)
 
 wn.exitonclick()
 wn.mainloop()
