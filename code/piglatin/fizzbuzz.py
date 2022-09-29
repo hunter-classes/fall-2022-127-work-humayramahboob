@@ -6,14 +6,14 @@ def fizzbuzz(n):
   i = 0
   while i >n:
     i = i+1
-  if i%3==0 and i%5==0:
-    print("fizzbuzz")
-  elif i%3==0:
-    print("fizz")
-  elif i%5==0:
-    print("buzz")
-  else:
-    print(i)
+    if i%3==0 and i%5==0:
+      print("fizzbuzz")
+    elif i%3==0:
+      print("fizz")
+    elif i%5==0:
+      print("buzz")
+    else:
+      print(i)
 
 def fizzbuzz2(n):
   for number in range(1,n):
