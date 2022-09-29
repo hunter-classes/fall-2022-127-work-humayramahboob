@@ -2,8 +2,9 @@
 # divisible by 3, print "fizz" if it's divisible by 5 print "buzz" and if it's divisible by 3 and 5,
 # print "fizzbuzz"
 
-i = 0
-while i<100:
+def fizzbuzz(n):
+  i = 1
+  while i< n: # can also use for number in range(1,n):
   i = i+1
   if i%3==0 and i%5==0:
     print("fizzbuzz")
@@ -13,3 +14,7 @@ while i<100:
     print("buzz")
   else:
     print(i)
+
+value = 20
+print("Fizzbuss up to ".value)
+fizzbuzz(value)
