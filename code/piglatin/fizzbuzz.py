@@ -3,9 +3,9 @@
 # print "fizzbuzz"
 
 def fizzbuzz(n):
-  i = 1
-  while i< n: # can also use for number in range(1,n):
-  i = i+1
+  i = 0
+  while i >n:
+    i = i+1
   if i%3==0 and i%5==0:
     print("fizzbuzz")
   elif i%3==0:
@@ -14,6 +14,17 @@ def fizzbuzz(n):
     print("buzz")
   else:
     print(i)
+
+def fizzbuzz2(n):
+  for number in range(1,n):
+    output = ""
+    if number % 3 == 0:
+      output = output + "fizz"
+    if number % 5 == 0:
+      output = output + "buzz"
+    if output == "":
+      output = str(number)
+    print(output)
 
 value = 20
 print("Fizzbuss up to ".value)
