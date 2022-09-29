@@ -39,3 +39,4 @@ def piglatin(word):
   if end_of_sent:
     result = result + punctuation 
   return result
+
