@@ -7,7 +7,16 @@ def average(numsList):
 
 # 6. Write a function sum_of_squares(xs) that computes the sum of the squares of the numbers in the list xs. For example, sum_of_squares([2, 3, 4]) should return 4+9+16 which is 29:
 def sum_of_squares(xs):
-  total = 0
+  sum = 0
   for num in xs:
-    total = total + num*num
-  return total
+    sum = sum + num*num
+  return sum
+
+grades = [90,95,100,90]
+print("grades:",grades)
+average = average(grades)
+print("Average:",average)
+
+l = [3,4,5]
+print("l:",l)
+print("sum of squares:",sum_of_squares(l))
