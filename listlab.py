@@ -16,17 +16,21 @@ def odd_numbers(lst):
 
 # Write a function that takes a string and returns a new string where all the words are capitalized.
 def capitalized(s):
-  s1 = s.upper()
+  words = s.split(" ")
+  s1 = ""
+  for word in words:
+    new_word = word.capitalize()
+    s1 = s1 + " " + new_word
   return s1
 
 # Write a function that takes a string and returns a new string with every word that's longer than 5 character turned into upper case
-def capitalized_long(s):
-    words = s.split(" ")
-    new_s = ""
-    for word in words:
-        if len(word) > 5:
-             new_word = word.upper()
-             new_s = new_s + " " + new_word
+def uppercase_long(s):
+  words = s.split(" ")
+  new_s = ""
+  for word in words:
+    if len(word) > 5:
+      new_word = word.upper()
+      new_s = new_s + " " + new_word
     return new_s
 
 # Write a function that takes a list of numbers and returns a new list with each item squared
