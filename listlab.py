@@ -19,8 +19,7 @@ def capitalized(s):
   words = s.split(" ")
   s1 = ""
   for word in words:
-    new_word = word.capitalize()
-    s1 = s1+" "+new_word
+    s1 = s1+" "+[word.capitalize()]
   return s1
 
 # Write a function that takes a string and returns a new string with every word that's longer than 5 character turned into upper case
@@ -29,10 +28,9 @@ def uppercase_long(s):
   new_s = ""
   for word in words:
     if len(word)>5:
-      new_word = word.upper()
-      new_s = new_s+" "+new_word
+      new_s = new_s+" "+[word.upper()]
     else: 
-      new_s= new_s+" "+word
+      new_s= new_s+" "+[word]
   return new_s
 
 # Write a function that takes a list of numbers and returns a new list with each item squared
@@ -64,7 +62,7 @@ def length_five(lst):
 def sum(lst):
   sum = 0
   index = 0
-  while index < len(lst) and lst[index] % 2 != 0:
+  while lst[index]%2!=0:
     sum = sum + lst[index]
     index = index + 1
   return sum
@@ -73,7 +71,7 @@ def sum(lst):
 def not_sam(lst):
   sum = 0
   index = 0
-  while index < len(lst) and lst[index] != "sam":
+  while lst[index]!= "sam":
     sum = sum + 1
     index = index + 1
   if lst[index]== "sam":
