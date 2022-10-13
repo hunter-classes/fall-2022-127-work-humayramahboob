@@ -31,6 +31,8 @@ def uppercase_long(s):
     if len(word)>5:
       new_word = word.upper()
       new_s = new_s+" "+new_word
+    else: 
+      new_s= new_s+" "+word
   return new_s
 
 # Write a function that takes a list of numbers and returns a new list with each item squared
