@@ -1,6 +1,6 @@
 # Write a function to find the smallest value in a listKfind smallest in a list of items
 def smalled_in_list(lst):
-  min = list[0]
+  min = lst[0]
   for i in lst:
     if i < min:
       min = i
