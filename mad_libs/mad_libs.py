@@ -38,3 +38,5 @@ prompt = file_translator('one.dat')
 print(mad_libs_filler(MAIN,NOUN,VERB,prompt))
 
 #TESTING SECOND MAD LIBS STORY
+prompt = file_translator('two.dat')
+print(mad_libs_filler(MAIN,NOUN,VERB,prompt))
