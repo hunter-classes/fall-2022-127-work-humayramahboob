@@ -3,13 +3,9 @@ import random
 def file_translator(f):
   new_f=open(f)
   data = new_f.read()
-  lines =data.split()
-  return lines
-  f_list=[]
-  for item in lines:
-    f_list.append(lines.split(" "))
-  return f_list
-
+  lines =data.split('\n')
+  words =data.split()
+  return words
 
 def mad_libs_filler(MAIN,NOUN,VERB,prompt):
   prompt_list=[]
@@ -27,16 +23,26 @@ def mad_libs_filler(MAIN,NOUN,VERB,prompt):
       prompt_list.append(item)
   result = ""
   result = " ".join(prompt_list)
+# EXTRA #3: To make sure that the first word stays capitalized after replacing it, I divide the lines up and then capitalized the first letter. I don't use the capitalize command since it gets rid of the capitals throughout the sentence.
+  lines = result.split('. ')
+  capitalized = []
+  for line in lines:
+    first = line[0]
+    new_result = first.upper() + line[1:]
+    capitalized.append(new_result)
+  result = ""
+  result = ". ".join(capitalized)
   return result
 
-NOUN = ["tree","material","water","lion","tiger","bear","food"]
-VERB =["eat","watch","play","run","attack","hit","share","make"]
-MAIN = ["sam","chase","sara","hunter","bailey","ash","shaniqua"]
+NOUN = ["car","house","tree","whale","store","hose","jar","pickle"]
+VERB =["eat","sleep","dance","vape","jump","run","walk","trip"]
+MAIN = ["john","juan","mary","susan","bill","klee","tammy","drake"]
 
 #TESTING FIRST MAD LIBS STORY
 prompt = file_translator('one.dat')
 print(mad_libs_filler(MAIN,NOUN,VERB,prompt))
 
+print("----------------------------------------------------")
 #TESTING SECOND MAD LIBS STORY
 prompt = file_translator('two.dat')
 print(mad_libs_filler(MAIN,NOUN,VERB,prompt))
