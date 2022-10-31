@@ -8,11 +8,12 @@ def findLargest(dataset):
     
 # freq(l,v) which takes a list of numbers(l) and a value (v). The function will return the frequency of v, that is, the number of times v appears in l.
 def freq(dataset,v):
-  total = 0
-  for i in dataset:
-    if i == v:
-      total = total+1
-  return total
+#  total = 0
+#  for i in dataset:
+#    if i == v:
+#      total = total+1
+#  return total
+  return len([x for x in dataset x == v])
 
 def buildRandomList(size,maxvalue):
   result = [random.randrange(maxvalue) for x in range(size)]
@@ -36,12 +37,31 @@ mode([5,5,5,4,4,4,2,2,7,7,8,8,9]) --> return 5 or 4 since both of those values a
   return modeSoFar
 
 def=testMode(size,maxValue):
+  print("Dataset Size:",size)
   dataset = buildRandomList(size,maxValue)
-  print(dataset)
-  t = datetime.datetime.now()
-  starttime = t.microsecond / 1000
+  # print(dataset)
   m = mode(dataset)
-  end = datetime.datetime.now()
-  elapsed = (end.microsecond / 1000)-starttime
-  print("size:",size,"time:",elapsed)
+  print("Mode:",m)
+
+for item in dataset:
+  x = x do something with dataset
+  z = x + y
+  if z > something:
+    something
+  else:
+    something else
     
+x = 5 
+y = 10
+if x > y:
+  z = x + y
+else:
+  z = x * y
+  z = z*z
+z = x+y
+z = z*z
+print(z)
+
+def fastMode(dataset):
+  # assume all values in dataset
+  # are between 0 and 99 
