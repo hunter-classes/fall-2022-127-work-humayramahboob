@@ -39,12 +39,37 @@ mode([5,5,5,4,4,4,2,2,7,7,8,8,9]) --> return 5 or 4 since both of those values a
       freqSoFar = freq(dataset,item)
   return modeSoFar
 
-def=testMode(size,maxValue):
+def fastMode(dataset):
+  largest = findLargest(dataset)
+  tallies = [0 for x in range(largest+1)]
+  for item in dataset:
+    tallies[item] = tallies[item] + 1
+  mode_count = findLargest(tallies)
+  for i in range(len(tallies)):
+    if tallies[i] == mode_count:
+      return i
+  return i
+  return tallies
+  
+def testMode(size,maxValue):
   print("Dataset Size:",size)
   dataset = buildRandomList(size,maxValue)
   # print(dataset)
   m = mode(dataset)
   print("Mode:",m)
+
+def testFindLargest(size,maxValue):
+    print("Dataset Size: ",size)
+    dataset = buildRandomList(size,maxValue)
+    # print(dataset)
+    m = findLargest(dataset)
+    print("Largest: ",m)
+
+def testFastMode(size,maxValue):
+  print("Dataset Size: ",size)
+  dataset = buildRandomList(size,maxValue)
+  m = fastMode(dataset)
+  print("Fast Mode: ",m)
 
 for item in dataset:
   x = x do something with dataset
@@ -64,21 +89,3 @@ else:
 z = x+y
 z = z*z
 print(z)
-
-def fastMode(dataset):
-  # assume all values in dataset
-  # are between 0 and 99 inclusive
-
-  # 1. make a list of 100 slots
-  # and set them all to 0
-  # this will store our tallies
-
-  # 2. Loop through our dataset
-  # and for each item incremement
-  # (add 1) to the appropriate
-  # slot in the tallies list
-
-  # 3. the index with the highest
-  # value in tallies is the mode
-
-  pass 
