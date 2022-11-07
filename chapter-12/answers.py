@@ -5,13 +5,14 @@ x = input("Please enter a sentence:")
 x = x.lower()
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 count_letters = {}
-if char in alphabet:
-  if char in count_letters:
-    count_letters[char] = count_letters[char]+1
-  else count_letters[char]=1
+for char in x:
+  if char in alphabet:
+    if char in count_letters.keys():
+      count_letters[char] = count_letters[char]+1
+    else:
+      count_letters[char]=1
 
-keys = count_letters.keys()
-for char in sorted(keys):
+for char in sorted(count_letters.keys()):
   print(char,count_letter[char])
 
 #Give the Python interpreter’s response to each of the following from a continuous interpreter session:
