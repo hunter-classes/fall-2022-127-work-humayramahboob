@@ -31,10 +31,10 @@ int main()  // here to end of line is a comment
   std::cout << "the var x = " << x << "\n";
   
   std::cout << "Doubles: "<< d <<" "<< d/2 <<std::endl;
-  std::cout << "Ints:"<<x<< " "<< x/2<< std::endl;
+  std::cout << "Ints:"<< x << " "<< x/2 << std::endl;
 
   c = 'x'; //a SINGLE character
-  std::cout<<c << "\n"
+  std::cout<< c << "\n"
 
   std::cout<<  "A true value:" << tf <<"\n"; //returns 1 if bool is true and 0 if bool is false
   return 0;
